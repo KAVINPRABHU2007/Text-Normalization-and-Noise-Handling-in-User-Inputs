@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Text Normalization and Noise Handling in User Inputs">
+<title>Text Normalization and Noise Handling in User Inputs</title>
+
+<style>
+
+/* Animated Rainbow Background */
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+color:white;
+background:linear-gradient(270deg,#ff4e50,#f9d423,#24c6dc,#5433ff,#ff4e50);
+background-size:1000% 1000%;
+animation:gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+/* Container */
+
+.container{
+width:85%;
+margin:auto;
+}
+
+/* Header */
+
+header{
+text-align:center;
+padding:40px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+animation:float 6s infinite ease-in-out;
+}
+
+header h1{
+font-size:40px;
+background:linear-gradient(to right,#ff9a9e,#fad0c4,#fad0c4);
+-webkit-background-clip:text;
+color:transparent;
+animation:pulse 3s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.05)}
+100%{transform:scale(1)}
+}
+
+/* Floating animation */
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+
+/* Sections */
+
+section{
+background:rgba(255,255,255,0.15);
+margin:30px 0;
+padding:25px;
+border-radius:15px;
+backdrop-filter:blur(10px);
+transition:0.4s;
+animation:float 8s infinite ease-in-out;
+}
+
+/* Hover Animation */
+
+section:hover{
+transform:scale(1.05) rotate(1deg);
+box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* Headings */
+
+h2{
+color:#ffe600;
+text-shadow:2px 2px 5px black;
+}
+
+/* Lists */
+
+li{
+margin:8px 0;
+}
+
+/* Code blocks */
+
+pre{
+background:#000;
+color:#00ff9d;
+padding:15px;
+border-radius:10px;
+overflow:auto;
+}
+
+/* Chatbot */
+
+.chatbot{
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+color:black;
+}
+
+details{
+background:white;
+color:black;
+padding:12px;
+margin:10px 0;
+border-radius:10px;
+transition:0.3s;
+}
+
+details:hover{
+transform:scale(1.05);
+background:#e0f7ff;
+}
+
+summary{
+font-weight:bold;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:25px;
+background:black;
+margin-top:40px;
+}
+
+/* Link */
+
+a{
+color:#00ffff;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Text Normalization and Noise Handling in User Inputs</h1>
+
+<p><b>Author:</b> KAVIN PRABU M</p>
+<p><b>Date:</b> March 15, 2026</p>
+
+<p>
+User generated text often contains spelling mistakes, slang, emojis and messy formatting.
+Before machines understand it, the text must be cleaned. This blog explains how
+text normalization and noise handling help improve NLP systems.
+</p>
+
+</header>
+
+<div class="container">
+
+<section>
+
+<h2>1. Introduction to Text Normalization</h2>
+
+<p>Text normalization converts text into a standard format so machines can process it easily.</p>
+
+<pre>
+Original:
+"Running", "RUNNING", "running!"
+
+Normalized:
+"running"
+</pre>
+
+</section>
+
+<section>
+
+<h2>2. What is Noise in User Input?</h2>
+
+<p>
+Noise is unnecessary or messy information inside text data that reduces quality.
+Examples include emojis, typos, or random characters.
+</p>
+
+</section>
+
+<section>
+
+<h2>3. Common Sources of Noise</h2>
+
+<ul>
+<li>Typographical errors</li>
+<li>Slang and abbreviations</li>
+<li>Special characters</li>
+<li>Mixed casing</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>4. Techniques for Text Normalization</h2>
+
+<ol>
+<li>Lowercasing</li>
+<li>Removing punctuation</li>
+<li>Stopword removal</li>
+<li>Stemming and Lemmatization</li>
+<li>Handling emojis and symbols</li>
+</ol>
+
+<pre>
+running -> run
+studies -> study
+better -> good
+</pre>
+
+</section>
+
+<section>
+
+<h2>5. Noise Handling Methods</h2>
+
+<ul>
+<li>Spell correction</li>
+<li>Regex filtering</li>
+<li>Tokenization</li>
+</ul>
+
+<pre>
+Regex Example:
+[^a-zA-Z0-9\s]
+</pre>
+
+</section>
+
+<section>
+
+<h2>6. Real-world Applications</h2>
+
+<ul>
+<li>Chatbots</li>
+<li>Search Engines</li>
+<li>Sentiment Analysis</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>7. Example Workflow for Preprocessing Text</h2>
+
+<pre>
+Raw Text
+ ↓
+Lowercase
+ ↓
+Remove punctuation
+ ↓
+Tokenization
+ ↓
+Stopword removal
+ ↓
+Stemming
+ ↓
+Clean Text
+</pre>
+
+</section>
+
+<section>
+
+<h2>8. Conclusion</h2>
+
+<p>
+Text normalization and noise handling are essential for preparing text data for NLP systems.
+Clean text improves machine learning accuracy and helps chatbots understand users better.
+</p>
+
+</section>
+
+<!-- CHATBOT -->
+
+<section class="chatbot">
+
+<h2>🤖 Simple Chatbot</h2>
+
+<p>Click a question to see the answer.</p>
+
+<details>
+<summary>What is text normalization?</summary>
+<p>Text normalization converts text into a standard format so machines can process it efficiently.</p>
+</details>
+
+<details>
+<summary>Why remove noise from text?</summary>
+<p>Removing noise improves data quality and helps NLP models understand the text better.</p>
+</details>
+
+<details>
+<summary>Where is text preprocessing used?</summary>
+<p>It is used in chatbots, search engines, sentiment analysis, and AI systems.</p>
+</details>
+
+<details>
+<summary>What is tokenization?</summary>
+<p>Tokenization splits text into smaller units like words or sentences.</p>
+</details>
+
+</section>
+
+</div>
+
+<footer>
+
+<p><b>Author:</b> KAVIN PRABU M</p>
+<p>© 2026 KAVIN PRABU M. All rights reserved.</p>
+<p>Contact: <a href="mailto:kavinprabum@example.com">kavinprabum@example.com</a></p>
+
+</footer>
+
+</body>
+
+</html>
